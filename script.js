@@ -1,1 +1,10 @@
-const menu=document.querySelector('.menu-btn');const nav=document.querySelector('nav');menu.addEventListener('click',()=>nav.classList.toggle('open'));document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));document.getElementById('year').textContent=new Date().getFullYear();document.getElementById('contactForm').addEventListener('submit',function(e){e.preventDefault();const name=document.getElementById('name').value;const level=document.getElementById('level').value;const subject=document.getElementById('subject').value;const message=document.getElementById('message').value;const body=`Name: ${name}%0D%0AStudent level: ${level}%0D%0ASubject: ${subject}%0D%0A%0D%0ALearning goals:%0D%0A${message}`;window.location.href=`mailto:YOUR_EMAIL_HERE?subject=Tutoring Enquiry from ${encodeURIComponent(name)}&body=${body}`;});
+const menu=document.querySelector('.menu-btn');
+const nav=document.querySelector('nav');
+menu.addEventListener('click',()=>nav.classList.toggle('open'));
+document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+document.getElementById('year').textContent=new Date().getFullYear();document.getElementById('contactForm').addEventListener('submit',function(e){e.preventDefault();
+const name=document.getElementById('name').value;
+const level=document.getElementById('level').value;
+const subject=document.getElementById('subject').value;
+const message=document.getElementById('message').value;
+const body=`Name: ${name}%0D%0AStudent level: ${level}%0D%0ASubject: ${subject}%0D%0A%0D%0ALearning goals:%0D%0A${message}`;window.location.href=`mailto:YOUR_EMAIL_HERE?subject=Tutoring Enquiry from ${encodeURIComponent(name)}&body=${body}`;});
