@@ -9,4 +9,4 @@ const level=document.getElementById('level').value;
 const subject=document.getElementById('subject').value;
 const message=document.getElementById('message').value;
 const body=`Name: ${name}%0D%0AStudent level: ${level}%0D%0ASubject: ${subject}%0D%0A%0D%0ALearning goals:%0D%0A${message}`;
-window.location.href=`mailto:engr.mariam.bashir@gmail.com subject=Tutoring Enquiry from ${encodeURIComponent(name)}&body=${body}`;});
+window.location.href=`mailto:engr.mariam.bashir@gmail.com?subject=Tutoring Enquiry from ${encodeURIComponent(name)}&body=${body}`;});
